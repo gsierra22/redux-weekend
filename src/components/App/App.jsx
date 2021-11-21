@@ -5,6 +5,9 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
 
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <Feeling/>
+      <Understanding/>
+      <Support/>
+      <Comments/>
     </div>
   );
 }
