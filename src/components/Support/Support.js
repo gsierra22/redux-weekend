@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 
 function Support(props) {
   
-  const [support, setSupport] = useState(1)
-  const supportReducer = useSelector(store => store.supportReducer);
+  const [support, setSupport] = useState()
+  const feedbackReducer = useSelector(store => store.feedbackReducer);
   const dispatch = useDispatch();
 
   const getSupport = event => {

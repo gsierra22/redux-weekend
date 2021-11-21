@@ -6,8 +6,9 @@ import {Link} from 'react-router-dom';
 
 function Understanding(props) {
   
-  const [understanding, setUnderstanding] = useState(1)
-  const understandingReducer = useSelector(store => store.understandingReducer);
+  const [understanding, setUnderstanding] = useState()
+  const feedbackReducer = useSelector(store => store.feedbackReducer);
+  console.log(feedbackReducer)
   const dispatch = useDispatch();
 
   const getUnderstanding = event => {

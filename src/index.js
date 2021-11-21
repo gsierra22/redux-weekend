@@ -11,34 +11,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // //Reducers
-const feelingReducer = (state = [], action) => {
+const feedbackReducer = (state = {
+  feeling: 0,
+  understanding: 0,
+  support: 0,
+  comments: ''},
+   action) => {
     console.log("Hello World!");
     if (action.type === 'ADD_FEELING'){
-        return [...state, action.payload];
+       state= {...state, feeling:action.payload};
     }
-    return state;
-  }; 
-
-  const understandingReducer = (state = [], action) => {
-    console.log("Hello World!");
-    if (action.type === 'ADD_UNDERSTANDING'){
-        return [...state, action.payload];
+    else if (action.type === 'ADD_UNDERSTANDING'){
+        state= {...state, understanding:action.payload};
     }
-    return state;
-  }; 
-
-  const supportReducer = (state = [], action) => {
-    console.log("Hello World!");
-    if (action.type === 'ADD_SUPPORT'){
-        return [...state, action.payload];
+    else if (action.type === 'ADD_SUPPORT'){
+      state= {...state, support:action.payload};
     }
-    return state;
-  }; 
-
-  const commentsReducer = (state = [], action) => {
-    console.log("Hello World!");
-    if (action.type === 'ADD_COMMENTS'){
-        return [...state, action.payload];
+    else if (action.type === 'ADD_COMMENTS'){
+      state= {...state, comments:action.payload};
+    }
+    else if (action.type === 'ADD_REVIEW'){
+      state= {...state, review:action.payload};
     }
     return state;
   }; 
@@ -47,10 +40,7 @@ const feelingReducer = (state = [], action) => {
   const storeInstance = createStore(
     combineReducers(
       {
-        feelingReducer,
-        understandingReducer,
-        supportReducer,
-        commentsReducer
+        feedbackReducer
       }
     ),
     applyMiddleware(

@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 
 function Feeling(props) {
   
-  const [feeling, setFeeling] = useState(1)
-  const feelingReducer = useSelector(store => store.feelingReducer);
+  const [feeling, setFeeling] = useState()
+  const feedbackReducer = useSelector(store => store.feedbackReducer);
   const dispatch = useDispatch();
 
   const getFeeling = event => {
