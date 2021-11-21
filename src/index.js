@@ -12,7 +12,34 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // //Reducers
 const feelingReducer = (state = [], action) => {
-    console.log("Hello World!")
+    console.log("Hello World!");
+    if (action.type === 'ADD_FEELING'){
+        return [...state, action.payload];
+    }
+    return state;
+  }; 
+
+  const understandingReducer = (state = [], action) => {
+    console.log("Hello World!");
+    if (action.type === 'ADD_UNDERSTANDING'){
+        return [...state, action.payload];
+    }
+    return state;
+  }; 
+
+  const supportReducer = (state = [], action) => {
+    console.log("Hello World!");
+    if (action.type === 'ADD_SUPPORT'){
+        return [...state, action.payload];
+    }
+    return state;
+  }; 
+
+  const commentsReducer = (state = [], action) => {
+    console.log("Hello World!");
+    if (action.type === 'ADD_COMMENTS'){
+        return [...state, action.payload];
+    }
     return state;
   }; 
 
@@ -20,7 +47,10 @@ const feelingReducer = (state = [], action) => {
   const storeInstance = createStore(
     combineReducers(
       {
-        feelingReducer
+        feelingReducer,
+        understandingReducer,
+        supportReducer,
+        commentsReducer
       }
     ),
     applyMiddleware(
