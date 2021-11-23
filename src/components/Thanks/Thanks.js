@@ -15,8 +15,8 @@ function Thanks() {
 
   return (
     <div>
-      <h1>Thanks</h1>
-      <Button><Link to="/">Submit</Link></Button>
+      <h1>Thank you for your feedback!</h1>
+      <Button><Link to="/">Enter another feedback form</Link></Button>
     </div>
   )
 }

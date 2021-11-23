@@ -28,6 +28,7 @@ function Understanding(props) {
       <h1>Are you understanding the material?</h1>
 
       <Select value={understanding} onChange={getUnderstanding}>
+        <MenuItem value=""><em></em></MenuItem>
                 <MenuItem value={1}>1</MenuItem>
                 <MenuItem value={2}>2</MenuItem>
                 <MenuItem value={3}>3</MenuItem>

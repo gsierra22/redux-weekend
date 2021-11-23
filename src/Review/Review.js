@@ -31,7 +31,6 @@ function Review ( props ) {
           <p>Understanding:{feedbackReducer.understanding}</p>
           <p>Support: {feedbackReducer.support}</p>
           <p>Comments:{feedbackReducer.comments}</p>
-          {/* {feedbackReducer.map(pizza => (< className="itemBox" pizza={pizza} key={pizza.id} />))} */}
           <Button onClick={setPost}><Link to="/thanks">Next</Link></Button>
       </div>
   )
