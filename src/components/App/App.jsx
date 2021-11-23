@@ -10,10 +10,28 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../../Review/Review';
 import Admin from '../Admin/Admin';
+import Thanks from '../Thanks/Thanks';
 
 
 
-function App(props) {
+function App(props) 
+
+{
+//   const[ feedback, setFeedback ]=useState( [] );
+
+//   useEffect(()=>{ 
+//     getFeedback();
+//   }, []);
+
+// const getFeedback = () => {
+//     axios.get('/feedback').then ( ( response )=>{
+//       console.log( 'getFeedback:', response.data );
+//       setFeedback(response.data);
+//     }).catch( ( err )=>{
+//       console.log( err );
+//       alert( 'ERROR! GET' );
+//     }) 
+//   } 
 
   return (
     <div className='App'>
@@ -28,6 +46,7 @@ function App(props) {
           <Route path='/support' element={<Support/>}></Route>
           <Route path='/comments' element={<Comments/>}></Route>
           <Route path='/review' element={<Review/>}></Route>
+          <Route path='/thanks' element={<Thanks/>}></Route>
           <Route path="/admin" element={ <Admin /> } ></Route>
         </Routes>
       </BrowserRouter>
