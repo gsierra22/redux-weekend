@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {useState, useEffect } from 'react';
-import {Select, MenuItem, Button, TextField} from "@material-ui/core";
+import {Select, MenuItem, Button, TextField, helperText, FormControl, Grid, Card, CardHeader, CardMedia, CardContent, Typography} from "@material-ui/core";
 import {Link} from 'react-router-dom';
 
 function Comments(props) {
@@ -23,12 +23,26 @@ function Comments(props) {
 
   return (
   <div>
-      <h1>Do you have any comments?
-      </h1>
+      <Grid container
+  alignItems="center"
+  justify="center"
+  style={{ width: '100%', height: 'auto'}}>
+    <Grid item xs={7}>
+<Card>
+<CardContent>
+<Typography>
+      <h1>Do you have any comments?</h1>
+      </Typography>
+      </CardContent>
+      <FormControl>
 
       <TextField value={comments} onChange={getComments}></TextField>
+      </FormControl>
       <Button onClick={addComments}>
             <Link to="/review">NEXT</Link></Button>
+            </Card>
+            </Grid>
+            </Grid>
       </div>
   )
 }

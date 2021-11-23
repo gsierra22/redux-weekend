@@ -23,14 +23,12 @@ function Feeling(props) {
     addFeeling();
   };
 
-  const addFeeling = event =>{
+  const addFeeling = event =>
     dispatch({
       type: 'ADD_FEELING',
       payload: feeling
     })
-  }
-  const error = feeling ==='';
-
+  
 
   return (
   <div>
@@ -47,10 +45,8 @@ function Feeling(props) {
       </CardContent>
       <FormControl>
       <Select value={feeling}
-       onChange={getFeeling}
-       helperText={error ? "Name needs to be 'a'" : "Perfect!"}
-       error={error}>
-                <MenuItem value=""><em></em>
+       onChange={getFeeling}>
+                <MenuItem value=""><em>How are you feeling?</em>
                 </MenuItem>
                 <MenuItem value={1}>1</MenuItem>
                 <MenuItem value={2}>2</MenuItem>
