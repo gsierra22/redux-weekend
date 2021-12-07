@@ -2,18 +2,18 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool.js');
 
-// // GET Route
-// router.get('/', (req, res) => {
-//     let queryString =  `SELECT * FROM "feedback";`;
-//     pool.query(queryString).then( ( results )=>{
-//         //if successful
-//         res.send( results.rows);
-//     }).catch( (err)=>{
-//         // if ERROR
-//         console.log('ERROR GET');
-//         res.sendStatus( 500 );
-//     })
-// }); // END GET Route
+// GET Route
+router.get('/', (req, res) => {
+    let queryString =  `SELECT * FROM "feedback";`;
+    pool.query(queryString).then( ( results )=>{
+        //if successful
+        res.send( results.rows);
+    }).catch( (err)=>{
+        // if ERROR
+        console.log('ERROR GET');
+        res.sendStatus( 500 );
+    })
+}); // END GET Route
 
 router.post('/', (req, res) => {
     console.log('in feedback post route with:', req.body);
