@@ -33,6 +33,9 @@ const feedbackReducer = (state = {
     else if (action.type === 'ADD_REVIEW'){
       state= {...state, review:action.payload};
     }
+    else if (action.type === 'DELETE'){
+      
+    }
     return state;
   }; 
 
